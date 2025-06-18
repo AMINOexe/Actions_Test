@@ -1,0 +1,17 @@
+name: Run Docker Hub Container
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-container:
+    runs-on: macOS-latest
+    container:
+      image: ade0brien/rwr
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4 
+      - name: Run a command inside the container
+        run: echo "Hello from the container!"
