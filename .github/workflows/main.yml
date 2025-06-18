@@ -7,7 +7,7 @@ on:
 
 jobs:
   run-container:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     container:
       image: ade0brien/rwr
     steps:
